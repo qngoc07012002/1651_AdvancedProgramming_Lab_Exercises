@@ -1,0 +1,16 @@
+C:\IT_AdvancedProgramming_1651\AdvancedProgramming_1651_Lab_Exercises\Day3_Exercises\bin\Debug\net5.0\Day3_Exercises.exe
+C:\IT_AdvancedProgramming_1651\AdvancedProgramming_1651_Lab_Exercises\Day3_Exercises\bin\Debug\net5.0\Day3_Exercises.deps.json
+C:\IT_AdvancedProgramming_1651\AdvancedProgramming_1651_Lab_Exercises\Day3_Exercises\bin\Debug\net5.0\Day3_Exercises.runtimeconfig.json
+C:\IT_AdvancedProgramming_1651\AdvancedProgramming_1651_Lab_Exercises\Day3_Exercises\bin\Debug\net5.0\Day3_Exercises.runtimeconfig.dev.json
+C:\IT_AdvancedProgramming_1651\AdvancedProgramming_1651_Lab_Exercises\Day3_Exercises\bin\Debug\net5.0\Day3_Exercises.dll
+C:\IT_AdvancedProgramming_1651\AdvancedProgramming_1651_Lab_Exercises\Day3_Exercises\bin\Debug\net5.0\Day3_Exercises.pdb
+C:\IT_AdvancedProgramming_1651\AdvancedProgramming_1651_Lab_Exercises\Day3_Exercises\obj\Debug\net5.0\Day3_Exercises.csproj.AssemblyReference.cache
+C:\IT_AdvancedProgramming_1651\AdvancedProgramming_1651_Lab_Exercises\Day3_Exercises\obj\Debug\net5.0\Day3_Exercises.GeneratedMSBuildEditorConfig.editorconfig
+C:\IT_AdvancedProgramming_1651\AdvancedProgramming_1651_Lab_Exercises\Day3_Exercises\obj\Debug\net5.0\Day3_Exercises.AssemblyInfoInputs.cache
+C:\IT_AdvancedProgramming_1651\AdvancedProgramming_1651_Lab_Exercises\Day3_Exercises\obj\Debug\net5.0\Day3_Exercises.AssemblyInfo.cs
+C:\IT_AdvancedProgramming_1651\AdvancedProgramming_1651_Lab_Exercises\Day3_Exercises\obj\Debug\net5.0\Day3_Exercises.csproj.CoreCompileInputs.cache
+C:\IT_AdvancedProgramming_1651\AdvancedProgramming_1651_Lab_Exercises\Day3_Exercises\obj\Debug\net5.0\Day3_Exercises.dll
+C:\IT_AdvancedProgramming_1651\AdvancedProgramming_1651_Lab_Exercises\Day3_Exercises\obj\Debug\net5.0\refint\Day3_Exercises.dll
+C:\IT_AdvancedProgramming_1651\AdvancedProgramming_1651_Lab_Exercises\Day3_Exercises\obj\Debug\net5.0\Day3_Exercises.pdb
+C:\IT_AdvancedProgramming_1651\AdvancedProgramming_1651_Lab_Exercises\Day3_Exercises\obj\Debug\net5.0\Day3_Exercises.genruntimeconfig.cache
+C:\IT_AdvancedProgramming_1651\AdvancedProgramming_1651_Lab_Exercises\Day3_Exercises\obj\Debug\net5.0\ref\Day3_Exercises.dll
