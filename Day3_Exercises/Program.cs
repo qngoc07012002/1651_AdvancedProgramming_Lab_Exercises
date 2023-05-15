@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Day3_Exercises
 {
@@ -79,7 +81,84 @@ namespace Day3_Exercises
         // Problem 4
         public static void Problem4()
         {
+            List<PersonPB4> listPerson = new List<PersonPB4>();
+            string st = Console.ReadLine();
+            string s = "";
+            for (int i = 0; i < st.Length; i++)
+            {
+                if (st[i] == ';' || i == st.Length - 1)
+                {
+                    if (i == st.Length - 1) s = s + st[i];
+                    string[] t = s.Split('=');
+                    listPerson.Add(new PersonPB4(t[0], int.Parse(t[1])));
+                    s = "";
+                }
+                else s = s + st[i];
+            }
 
+            List<ProductPB4> listProduct = new List<ProductPB4>();
+            st = Console.ReadLine();
+            s = "";
+            for (int i = 0; i < st.Length; i++)
+            {
+                if (st[i] == ';')
+                {
+                    string[] t = s.Split('=');
+                    listProduct.Add(new ProductPB4(t[0], int.Parse(t[1])));
+                    s = "";
+                }
+                else s = s + st[i];
+            }
+
+            List<string> stringList = new List<string>();
+            st = Console.ReadLine();
+            do
+            {
+                stringList.Add(st.Trim());
+                st = Console.ReadLine();
+
+            } while (st.Equals("END") == false);
+
+            foreach (var sst in stringList)
+            {
+                string d = sst.Trim();
+           
+                List<string> sdt = d.Split(' ').ToList();
+                Console.WriteLine(sdt[0]," ",sdt[1]);
+                foreach (var person in listPerson)
+                {
+                    if (sdt[0].Equals(person.Name))
+                    {
+                        foreach (var product in listProduct)
+                        {
+                            if (sdt[1].Equals(product.Name))
+                            {
+                                //Console.WriteLine($"{person.Name} {person.Money} {product.Name} {product.Cost}");
+                                if (person.Money - product.Cost >= 0)
+                                {
+                                    person.Money = person.Money - product.Cost;
+                                    person.AddProductToBag(product);
+                                    Console.WriteLine($"{person.Name} bought {product.Name}");
+                                }
+                                else
+                                {
+                                    Console.WriteLine($"{person.Name} can't afford {product.Name}");
+                                }
+                                break;
+                            }
+
+                        }
+                    }
+                    break;
+
+                }
+            }
+
+            foreach (var person in listPerson)
+            {
+                person.DisplayProductInBag();
+                Console.WriteLine();
+            }
         }
 
         // Problem 5
