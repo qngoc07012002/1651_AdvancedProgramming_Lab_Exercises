@@ -45,14 +45,19 @@ namespace Day3_Exercises
             Console.WriteLine($"Lateral Surface Area – {box.LateralSurfaceArea():F2}");
             Console.WriteLine($"Volume - {box.Volume():F2}");
 
-
-
         }
 
         // Problem 2
         public static void Problem2()
         {
+            double length = double.Parse(Console.ReadLine());
+            double width = double.Parse(Console.ReadLine());
+            double height = double.Parse(Console.ReadLine());
 
+            BoxPB1 box = new BoxPB1(length, width, height);
+            Console.WriteLine($"Surface Area – {box.SurfaceArea():F2}");
+            Console.WriteLine($"Lateral Surface Area – {box.LateralSurfaceArea():F2}");
+            Console.WriteLine($"Volume - {box.Volume():F2}");
         }
 
         // Problem 3

@@ -12,9 +12,33 @@ namespace Day3_Exercises
         private double width;
         private double height;
 
-        public double Length { get { return length; } set { length = value; } } 
-        public double Width { get { return width; } set { width = value; } }
-        public double Height { get { return height; } set { height = value; } }
+        public double Length {
+            get { return length; } 
+            set {
+                if (value <= 0) { 
+                    Console.WriteLine("Length cannot be zero or negative. ");
+                    Environment.Exit(0);
+                }
+                else length = value; 
+            } } 
+        public double Width { 
+            get { return width; } 
+            set {
+                if (value <= 0) { 
+                    Console.WriteLine("Width cannot be zero or negative. ");
+                    Environment.Exit(0);
+                }
+                else width = value; 
+            } }
+        public double Height { 
+            get { return height; } 
+            set {
+                if (value <= 0) {
+                    Console.WriteLine("Height cannot be zero or negative. ");
+                    Environment.Exit(0);
+                }
+                else height = value; 
+            } }
 
         public BoxPB1(double length, double width, double height)
         {
