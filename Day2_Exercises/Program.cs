@@ -530,7 +530,9 @@ namespace Day2_Exercises
 
                     }
                 }
-
+                Console.WriteLine(command[i]);
+                move(matrix, numberOfRow, numberOfColumn);
+                Console.WriteLine();
                 for (int j = 0; j < numberOfColumn; j++)
                 {
                     if (matrix[samPoint.X,j] == 'b')

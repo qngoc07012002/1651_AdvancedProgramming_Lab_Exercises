@@ -16,8 +16,8 @@ namespace Day2_Exercises
 
         public PositionPB6(int x, int y)
         {
-            this.x = x;
-            this.y = y;
+            this.X = x;
+            this.Y = y;
         }
     }
 }

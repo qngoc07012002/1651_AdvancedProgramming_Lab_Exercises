@@ -63,7 +63,17 @@ namespace Day3_Exercises
         // Problem 3
         public static void Problem3()
         {
-
+            string name = Console.ReadLine();
+            int age = int.Parse(Console.ReadLine());
+            try
+            {
+                Chicken chicken = new Chicken(name, age);
+                chicken.ProductPerDay();
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         // Problem 4
