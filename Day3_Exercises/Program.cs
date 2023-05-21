@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace Day3_Exercises
 {
@@ -119,11 +120,28 @@ namespace Day3_Exercises
 
             } while (st.Equals("END") == false);
 
+
+            for (int i = 0; i < stringList.Count; i++)
+            {
+                StringBuilder stt = new StringBuilder(stringList[i]);
+                for (int j= 0; j < stt.Length; j++)
+                {
+                    if (stt[j] == ' ')
+                    {
+                        stt[j] = ';';
+                    }
+                }
+                stringList[i] = stt.ToString();
+
+            }
+                
+           
+            Console.WriteLine();
             foreach (var sst in stringList)
             {
                 string d = sst.Trim();
            
-                List<string> sdt = d.Split(' ').ToList();
+                List<string> sdt = d.Split(';').ToList();
                 Console.WriteLine(sdt[0]," ",sdt[1]);
                 foreach (var person in listPerson)
                 {
