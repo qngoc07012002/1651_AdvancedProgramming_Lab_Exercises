@@ -33,6 +33,15 @@ namespace Day4_Exercises
                 case 7:
                     Problem7();
                     break;
+                case 8:
+                    Problem8();
+                    break;
+                case 9:
+                    Problem9();
+                    break;
+                case 10:
+                    Problem10();
+                    break;
             }
         }
 
@@ -126,7 +135,7 @@ namespace Day4_Exercises
             }
 
             string lastDigits = Console.ReadLine();
-                
+
             foreach (ACitizen citizen in citizens)
             {
                 if (citizen.isDetained(lastDigits))
@@ -191,7 +200,7 @@ namespace Day4_Exercises
                 }
             }
         }
-    
+
 
         // Problem 7
         static void Problem7()
@@ -246,5 +255,115 @@ namespace Day4_Exercises
 
             Console.WriteLine(totalFood);
         }
+        // Problem 8
+        static void Problem8()
+        {
+            List<ISoldier> soldiers = new List<ISoldier>();
+
+            string input;
+            while ((input = Console.ReadLine()) != "End")
+            {
+                string[] tokens = input.Split(' ');
+
+                string type = tokens[0];
+                string id = tokens[1];
+                string firstName = tokens[2];
+                string lastName = tokens[3];
+
+                if (type == "Private")
+                {
+                    double salary = double.Parse(tokens[4]);
+                    soldiers.Add(new Private(id, firstName, lastName, salary));
+                }
+                else if (type == "LeutenantGeneral")
+                {
+                    double salary = double.Parse(tokens[4]);
+
+                    LeutenantGeneral leutenantGeneral = new LeutenantGeneral(id, firstName, lastName, salary);
+
+                    for (int i = 5; i < tokens.Length; i++)
+                    {
+                        string privateId = tokens[i];
+
+                        IPrivate @private = (IPrivate)soldiers.Find(s => s.Id == privateId);
+
+                        leutenantGeneral.AddPrivate(@private);
+                    }
+
+                    soldiers.Add(leutenantGeneral);
+                }
+                else if (type == "Engineer")
+                {
+                    double salary = double.Parse(tokens[4]);
+                    string corps = tokens[5];
+
+                    if (corps != "Airforces" && corps != "Marines")
+                    {
+                        continue;
+                    }
+
+                    Engineer engineer = new Engineer(id, firstName, lastName, salary, corps);
+
+                    for (int i = 6; i < tokens.Length; i += 2)
+                    {
+                        string partName = tokens[i];
+                        int hoursWorked = int.Parse(tokens[i + 1]);
+
+                        engineer.AddRepair(new Repair(partName, hoursWorked));
+                    }
+
+                    soldiers.Add(engineer);
+                }
+                else if (type == "Commando")
+                {
+                    double salary = double.Parse(tokens[4]);
+                    string corps = tokens[5];
+
+                    if (corps != "Airforces" && corps != "Marines")
+                    {
+                        continue;
+                    }
+
+                    Commando commando = new Commando(id, firstName, lastName, salary, corps);
+
+                    for (int i = 6; i < tokens.Length; i += 2)
+                    {
+                        string codeName = tokens[i];
+                        string state = tokens[i + 1];
+
+                        if (state != "inProgress" && state != "Finished")
+                        {
+                            continue;
+                        }
+
+                        commando.AddMission(new Mission(codeName, state));
+                    }
+
+                    soldiers.Add(commando);
+                }
+                else if (type == "Spy")
+                {
+                    int codeNumber = int.Parse(tokens[4]);
+                    soldiers.Add(new Spy(id, firstName, lastName, codeNumber));
+                }
+            }
+
+            foreach (var soldier in soldiers)
+            {
+                Console.WriteLine(soldier.ToString());
+            }
+        }
+
+        // Problem 9
+        static void Problem9()
+        {
+        }
+
+        // Problem 10
+        static void Problem10()
+        {
+        }
     }
+
+
 }
