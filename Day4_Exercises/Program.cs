@@ -357,6 +357,39 @@ namespace Day4_Exercises
         // Problem 9
         static void Problem9()
         {
+            string[] addInput = Console.ReadLine().Split(' ');
+            int removeOperations = int.Parse(Console.ReadLine());
+
+            AddCollection addCollection = new AddCollection();
+            AddRemoveCollection addRemoveCollection = new AddRemoveCollection();
+            MyList myList = new MyList();
+
+            string addColect = "";
+            string addRemoveColect = "";
+            string myListColect = "";
+
+            foreach (var item in addInput)
+            {
+                addColect = addColect + " " + addCollection.Add(item);
+                addRemoveColect = addRemoveColect + " " + addRemoveCollection.Add(item);
+                myListColect = myListColect + " " + myList.Add(item);
+            }
+
+            Console.WriteLine(addColect);
+            Console.WriteLine(addRemoveColect);
+            Console.WriteLine(myListColect);
+
+            string addRemoveColectRemove = "";
+            string myListColectRemove = "";
+
+            for (int i = 0; i < removeOperations; i++)
+            {
+                addRemoveColectRemove = addRemoveColectRemove + " " + addRemoveCollection.Remove();
+                myListColectRemove = myListColectRemove + " " + myList.Remove();
+            }
+
+            Console.WriteLine(addRemoveColectRemove);
+            Console.WriteLine(myListColectRemove);
         }
 
         // Problem 10
